@@ -87,7 +87,7 @@ function setInfo(data){
 
     //let icon = data.current.condition.icon.slice(21)
     let icon = data.current.condition.icon
-    img.src = `${icon}`;
+    img.src = `https:${icon}`;
 
     flag = div.appendChild(img);
 

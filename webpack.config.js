@@ -9,6 +9,7 @@ const webpack = require("webpack");
 const terser = require("terser");
 
 const jsArr = [
+  path.resolve(__dirname, "src/js/jquery-3.6.0.min.js"),
   path.resolve(__dirname, "src/js/script.js"),
 ];
 
@@ -18,7 +19,7 @@ const templatesFiles =
   files.filter((el) => /\.html$/.test(el) && el !== "index.html") || [];
 
 module.exports = (env, argv) => {
-  const isProduction = argv.mode === "development";
+  const isProduction = argv.mode === "production";
   const plugins = [
     new MiniCssExtractPlugin({ filename: "./dist/css/style.css" }),
     new WebpackConcatPlugin({
@@ -38,6 +39,7 @@ module.exports = (env, argv) => {
         },
       ],
     }),
+
   ];
 
   if (!isProduction) {
