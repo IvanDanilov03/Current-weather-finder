@@ -1,0 +1,58 @@
+//fonts
+$google-font: "https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" ;
+
+$baseFontSize: 16px;
+$baseFontFamily: 'Source Sans Pro', sans-serif;
+$lightFontWeight: 300;
+$mediumFontWeight: 400;
+$boldFontWeight: 700;
+
+
+$mobilePadding: 12px;
+$desktopPadding: 1rem;
+$maxWidth: 1440px;
+// Paths
+
+$ip: "../i/";
+$fontsPath: "../fonts/";
+$usersFilesPath: "../userfiles/";
+
+// Colors
+$blue: #1E236D;
+$white: #ffffff;
+$purple: #886DFD;
+
+@mixin head-square{
+    background: rgba(136, 109, 253, .1), ;
+    border: 0;
+    border-radius: 12px;
+    color: $purple;
+    padding: 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+@mixin button-box{
+    display: flex;
+    flex-direction: table;
+}
+@mixin button-box__img{
+    width: 45px;
+    padding-right: 10px;
+}
+
+@mixin title{
+    color: $blue;
+    text-align: center;
+    font-weight: $boldFontWeight;
+    font-size: 1.8rem;
+}
+
+@mixin main_text{
+    font-weight: $lightFontWeight;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
