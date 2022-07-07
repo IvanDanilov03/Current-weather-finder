@@ -1,1 +1,1 @@
-# final-project-of-course
+# current weather finder
