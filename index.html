@@ -1,51 +1,212 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>title</title>
+    <title>CAT APP</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="dist/css/style.css" />
   <script defer src="js/app.js"></script><link href="./dist/css/style.css" rel="stylesheet"></head>
   <body>
+    <div class="grid-container">
+      <div class="left-part">
+        <header class="logo">
+          <object type="image/svg+xml" data="picture.svg"> 
+            <img src="images/logo.svg">
+          </object>
+        </header>
+  
+        <section class="main-text">
+          <h2 class="main-text__greating">Hi intern!</h2>
+          <h3 class="main-text__welcome">Welcome to MI 2022 Front-end test</h3>
+          <h3 class="main-text__letsstart">Lets start using The Cat API</h3>
+        </section>
+  
+        <article class="choose">
+          <div class="choose__voting">
+            <div class="choose__voting-icon">
+              <object type="image/svg+xml" data="picture.svg"> 
+                <img src="images/vote-table.svg">
+              </object>
+            </div>
+  
+            <div class="choose__voting-button">
+              <button class='choose__voting-button-el'>VOTING</button>
+            </div>
+          </div>
+  
+          <div class="choose__breeds">
+            <div class="choose__breeds-icon">
+              <object type="image/svg+xml" data="picture.svg"> 
+                <img src="images/pet-breeds.svg">
+              </object>
+            </div>
+            <div class="choose__breeds-button">
+              <button class='choose__breeds-button-el'>BREEDS</button>
+    
+            </div>
+          </div>
+  
+          <div class="choose__galery">
+            <div class="choose__galery-icon">
+              <object type="image/svg+xml" data="picture.svg"> 
+                <img src="images/images-search.svg">
+              </object>
+            </div>
+            <div class="choose__galery-button">
+              <button class='choose__galery-button-el'>GALERY</button>
+            </div>
+          </div>
+  
+        </article>
+      </div>
+      
+      
+      <aside class="right-place">
+            <img class="right-place__img" src="images/girl-and-pet1.svg">
+      </aside> 
 
-    <div class="finder">
+      <aside class="right-functional">
+        <aside class="header">
+          <aside class="search">
+            <div class="search-bar">
+              <input type="text" class="search-bar__input" placeholder="Search for breeds by name">
+              <button class="search-bar__btn"> <span class="search-bar__btn-span"></span>
+              </button>
+            </div>
+          </aside>
+          <aside class="lists">
+            <div class="lists-likes">
+              <button class="lists-likes__btn"> <span class="lists-likes__btn-span "></span>
+              </button>
+            </div>
+            <div class="lists-favourites">
+              <button class="lists-favourites__btn"> <span class="lists-favourites__btn-span"></span>
+              </button>
+            </div>
+            <div class="lists-dislikes">
+              <button class="lists-dislikes__btn"> <span class="lists-dislikes__btn-span"></span>
+              </button>
+            </div>
+          </aside>
+        </aside>
+
+        <aside class="voting tabs-content__item">
+          <header class="voting-header">
+            <button class="voting-header__btn header__btn"> <span class="voting-header__btn-span btn-span"></span></button>
+            <div class="voting-header__title header__title">
+              <h2 class="voting-header__title-text">VOTING</h2>
+            </div>
+          </header>
+          <article class="voting-main">
+            <div class="voting-main__img-box">
+              <!-- <img src="images/test.jpg"> -->
+            </div>
+            <div class="voting-main__btn-box">
+              <div class="voting-main__btn-like">
+                <!-- <button class="btn-like"> <span class="btn-like-span "></span> -->
+              </div>
+              <div class="voting-main__btn-favourite">
+                <!-- <button class="btn-favourite"> <span class="btn-favourite-span "></span> -->
+              </div>
+              <div class="voting-main__btn-dislike">
+                <!-- <button class="btn-dislike"> <span class="btn-dislike-span "></span> -->
+              </div>
+            </div>
+          </article>
+          <article class="voting-list">
+
+          </article>
+        </aside>
   
-      <div class="theme-box">
-        <button class='theme-box__btn theme-box__btn-day' data-file="day">Day</button>
-        <button class='theme-box__btn theme-box__btn-night' data-file="night">Night</button>
-      </div>
+        <aside class="breeds tabs-content__item">
+          <header class="breeds-header">
+            <button class="breeds-header__btn header__btn"> <span class="breeds-header__btn-span btn-span"></span></button>
+            <div class="breeds-header__title header__title">
+              <h2 class="breeds-header__title-text">BREEDS</h2>
+            </div>
+            <div class="breeds-header__list">
+              <select name="breeds" class="breeds-header__list-control" >
+                <option value="0">All breeds</option>
+              </select>
+            </div>
+            <div class="breeds-header__limits">
+              <select name="limits" class="breeds-header__limits-control" >
+                <option hidden selected>Limit: 10</option>
+
+                <option value="5">Limit: 5</option>
+                <option value="10">Limit: 10</option>
+                <option value="15">Limit: 15</option>
+                <option value="20">Limit: 20</option>
+              </select>
+            </div>
+            <div class="breeds-header__alphabet-up">
+            </div>
+            <div class="breeds-header__alphabet-down">
+            </div>
+          </header>
+          <div class="breeds-galery">
+          </div>
+
+
+
+        </aside>
+        <aside class="breeds-spesific">
+          <header class="breeds-spesific__header">
+            <button class="specific__btn header__btn"> <span class="specific__btn-span btn-span"></span></button>
+            <div class="specific__title header__title">
+              <h2 class="specific__title-text">BREEDS</h2>
+            </div>
+            <div class="specific__id header__id">
+              <h2 class="specific__title-text">54</h2>
+            </div>
+          </header>
+          <article class="breeds-spesific__info">
+            <div class="breeds-spesific__img-box">
+              <!-- <img src="images/test.jpg"> -->
+            </div>  
+            <div class="breed-info__description">
+              <div class="breed-info__description-title">
+                <h2 class="breed-info__title">Basenji</h2>
+                <h2 class="bredd-info__breed-for">Family companion cat</h2>
+              </div>
+              <div class="breed-info__description-main">
+                <div class="breed-info__description-left">
+                  <h2 class="description-left__temperament">Temperament:</h2>
+                  <h2 class="description-left__text">Active, Energetic, Independent, Intelligent, Gentle</h2>
+                </div>
+                <div class="breed-info__description-right">
+                  <h2 class="description-right__origin"><span class="bold">Origin: </span><span class="breed-origin"></span></h2>
+                  <h2 class="description-right__weight"><span class="bold">Weight: </span><span class="breed-weight"></span></h2>
+                  <h2 class="description-right__life-span"><span class="bold">Life span: </span><span class="breed-life-span"></span></h2>
+                </div>
+              </div>
+
+            </div>
+
+          </article>
+        </aside>
   
-      <h1 class="title">Current weather finder</h1>
-  
-      <div class="search-bar">
-        <input type="text" class="search-bar__input" placeholder="Search for any city name">
-        <button class="search-bar__btn"></button>
-      </div>
-  
-      <div class="info">
-  
-        <div class="info__block">
-          <div class="info__block-subtitle">Location</div>
-          <div class="info__block-title" id="location"></div>
-        </div>
-  
-        <div class="info__block">
-          <div class="info__block-subtitle">Current temp</div>
-          <div class="info__block-title" id="current"></div>
-          <div class="info__block-img" id="info__block-img"></div>
-        </div>
-  
-        <div class="info__block">
-          <div class="info__block-subtitle">Feels like</div>
-          <div class="info__block-title" id="feelslike"></div>
-        </div>
-  
-      </div>
+        <aside class="galery tabs-content__item">
+          <header class="galery-header">
+            <button class="galery-header__btn header__btn"> <span class="galery-header__btn-span btn-span"></span></button>
+            <div class="galery-header__title header__title">
+              <h2 class="galery-header__title-text">GALERY</h2>
+            </div>
+          </header>
+          <h2>in Progres...</h2>
+          
+        </aside>
+
+      </aside>
+
     </div>
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="js/button.js"></script>
+    <script src="js/voting.js"></script>
+
     <script src="js/script.js"></script>
-</script>
 
   </body>
 </html>

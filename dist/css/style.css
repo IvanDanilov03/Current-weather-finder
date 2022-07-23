@@ -1,7 +1,7 @@
 /*!**********************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/scss/style.scss ***!
   \**********************************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Jost:wght@400;500&display=swap);
 /*!**************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/scss/style.scss (1) ***!
   \**************************************************************************************************************************************************************************/
@@ -365,237 +365,959 @@ textarea {
 }
 
 :root {
-  font-size: 10px;
-  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
 }
 
 * {
   margin: 0;
+  font-family: "Jost", sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  background-color: #dfdfff;
+  background-color: #F8F8F7;
 }
 
-.title {
-  color: black;
-}
-
-html.day body {
-  background-color: #dfdfff;
-}
-
-html.day .title {
-  color: black;
-}
-
-html.night body {
-  background-color: #14145f;
-}
-
-html.night .title {
-  color: white;
-}
-
-.finder {
-  background-size: cover;
-  padding: 2rem 1.5rem 17.5rem;
-  text-align: center;
-  position: relative;
-}
-
-.theme-box {
+.grid-container {
+  min-height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
-  padding-bottom: 3rem;
 }
 
-.theme-box__btn {
-  background-color: #141414;
-  border: 1px solid rgba(54, 54, 54, 0.6);
-  color: white;
-  font-weight: 600;
-  position: relative;
-  outline: none;
+.grid-container .left-part {
+  margin-left: 147px;
   display: flex;
-  font-size: 16px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  height: 45px;
-  width: 90px;
-  opacity: 1;
+  flex-direction: column;
 }
 
-.theme-box__btn-day {
-  background-color: white;
-  border-radius: 50px 0 0 50px;
-  color: #141414;
-}
-
-.theme-box__btn-night {
-  background-color: #141414;
-  border-radius: 0 50px 50px 0;
-  color: white;
-}
-
-@media (min-width: 1024px) {
-  .finder {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 1.5rem;
-  }
-  .theme-box {
-    align-self: flex-start;
+@media (max-height: 575px) {
+  .grid-container {
+    height: 100%;
   }
 }
 
-.title {
-  /* color: white; */
-  margin-bottom: 1.5rem;
+.logo {
+  padding-top: 30px;
+}
+
+.main-text {
+  padding-top: 80px;
+}
+
+.main-text__greating {
+  font-size: 44px;
   font-weight: 500;
-  font-size: 3rem;
+  color: #1D1D1D;
+  padding-top: 10px;
+}
+
+.main-text__welcome {
+  font-size: 20px;
+  font-weight: 400;
+  color: #8C8C8C;
+}
+
+.main-text__letsstart {
+  padding-top: 60px;
+  font-size: 20px;
+  color: #1D1D1D;
+  padding-bottom: 10px;
+}
+
+.choose {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.right-place {
+  width: 100%;
+  margin: 50px 50px 50px 300px;
+  border-radius: 20px;
+  background-color: #FBE0DC;
+}
+
+.right-place .right-place__img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2, 1.1);
+}
+
+.right-functional {
+  margin: 10px 100px 10px 200px;
+}
+
+.choose__voting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choose__breeds {
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choose__galery {
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choose__voting-icon {
+  background-color: #B4B7FF;
+  border: 5px solid;
+  border-radius: 20px;
+  border-color: #d6d7ff;
+}
+
+.choose__breeds-icon {
+  background-color: #97EAB9;
+  border: 5px solid;
+  border-radius: 20px;
+  border-color: #d9fde9;
+}
+
+.choose__galery-icon {
+  background-color: #FFD280;
+  border: 5px solid;
+  border-radius: 20px;
+  border-color: #feedce;
+}
+
+.choose__voting-button {
+  width: 138px;
+  height: 36px;
+  background-color: #FFF;
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+}
+
+.choose__voting-button button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  vertical-align: middle;
+  color: #FF868E;
+  cursor: pointer;
+}
+
+.choose__voting-button:hover {
+  background-color: #FBE0DC;
+}
+
+.choose__breeds-button {
+  width: 138px;
+  height: 36px;
+  background-color: #FFF;
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+}
+
+.choose__breeds-button button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  vertical-align: middle;
+  color: #FF868E;
+  cursor: pointer;
+}
+
+.choose__breeds-button:hover {
+  background-color: #FBE0DC;
+}
+
+.choose__galery-button {
+  width: 138px;
+  height: 36px;
+  background-color: #FFF;
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+}
+
+.choose__galery-button button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  vertical-align: middle;
+  color: #FF868E;
+  cursor: pointer;
+}
+
+.choose__galery-button:hover {
+  background-color: #FBE0DC;
+}
+
+.is-active {
+  background-color: #FF868E;
+}
+
+.is-active button {
+  color: #FFF;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
 }
 
 .search-bar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #FFF;
+  height: 60px;
+  width: 470px;
+  border-radius: 20px;
   display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
+  flex-direction: row;
+  align-items: center;
 }
 
-.search-bar__input {
+.search-bar .search-bar__input {
   width: 100%;
-  max-width: 500px;
-  font-size: 1.8rem;
-  font-weight: 700;
-  background-color: white;
-  color: #2b2b2b;
-  border: none;
-  outline: none;
-  padding: 1.5rem 2rem;
-  border-radius: 10px 0 0 10px;
-  cursor: pointer;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #1D1D1D;
+}
+
+.search-bar .search-bar__input .placeholder {
+  color: #8C8C8C;
+}
+
+.search-bar:focus-within {
+  border: 3px solid;
+  border-color: #FF868E;
 }
 
 .search-bar__btn {
-  background-color: black;
-  border: none;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.search-bar__btn span.search-bar__btn-span {
+  background: url(/images/find.svg) no-repeat center;
+  margin-top: 3px;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 52px;
+  width: 40px;
+}
+
+.search-bar__btn span.search-bar__btn-span:hover, .search-bar__btn span.search-bar__btn-span:focus {
+  background: url(/images/find2.svg) no-repeat center;
+}
+
+.lists {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.lists-likes__btn {
+  background-color: #FFF;
+  border-radius: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.lists-likes__btn span.lists-likes__btn-span {
+  background: url(/images/smile_red.svg) no-repeat center;
+  margin-top: 3px;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 52px;
+  width: 40px;
+}
+
+.lists-likes__btn:hover {
+  background-color: #FBE0DC;
+}
+
+.active {
+  background-color: #FF868E;
+}
+
+.active span {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(246deg) brightness(109%) contrast(101%);
+}
+
+.lists-favourites__btn {
+  margin-left: 10px;
+  background-color: #FFF;
+  border-radius: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.lists-favourites__btn span.lists-favourites__btn-span {
+  background: url(/images/heart_red.svg) no-repeat center;
+  margin-top: 3px;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 52px;
+  width: 40px;
+}
+
+.lists-favourites__btn:hover {
+  background-color: #FBE0DC;
+}
+
+.lists-dislikes__btn {
+  margin-left: 10px;
+  background-color: #FFF;
+  border-radius: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.lists-dislikes__btn span.lists-dislikes__btn-span {
+  background: url(/images/sad_red.svg) no-repeat center;
+  margin-top: 3px;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 52px;
+  width: 40px;
+}
+
+.lists-dislikes__btn:hover {
+  background-color: #FBE0DC;
+}
+
+.voting {
+  height: calc(100vh - 9em);
+  background-color: #FFF;
+  border-radius: 20px;
+}
+
+.voting .voting-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.voting .voting-header .header__btn {
+  margin-left: 10px;
+}
+
+.voting .voting-header .header__btn span.btn-span {
+  background: url(/images/back.svg) no-repeat center;
+  margin-top: 3px;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 52px;
+  width: 40px;
+}
+
+.voting .voting-header .header__btn span.btn-span:hover, .voting .voting-header .header__btn span.btn-span:focus {
+  background: url(/images/back2.svg) no-repeat center;
+}
+
+.voting .voting-header .header__title {
+  margin-left: 10px;
+  width: 146px;
+  height: 40px;
+  background-color: #FF868E;
+  border-radius: 10px;
+}
+
+.voting .voting-header .header__title h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #FFF;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.breeds {
+  width: 680px;
+  height: calc(100vh - 9em);
+  border-radius: 20px;
+  background-color: #FFF;
+  overflow-y: scroll;
+}
+
+.breeds .breeds-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.breeds .breeds-header .header__btn {
+  margin-left: 10px;
+}
+
+.breeds .breeds-header .header__btn span.btn-span {
+  background: url(/images/back.svg) no-repeat center;
+  margin-top: 3px;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 52px;
+  width: 40px;
+}
+
+.breeds .breeds-header .header__btn span.btn-span:hover, .breeds .breeds-header .header__btn span.btn-span:focus {
+  background: url(/images/back2.svg) no-repeat center;
+}
+
+.breeds .breeds-header .header__title {
+  margin-left: 10px;
+  width: 146px;
+  height: 40px;
+  background-color: #FF868E;
+  border-radius: 10px;
+}
+
+.breeds .breeds-header .header__title h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #FFF;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.breeds .breeds-header .breeds-header__list {
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.breeds .breeds-header .breeds-header__list select {
+  -webkit-appearance: none;
+  color: #8C8C8C;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: #F8F8F7;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 150ms ease;
+  width: 226px;
+  height: 40px;
   outline: none;
-  color: white;
-  padding: 0 1.5rem;
-  border-radius: 0 10px 10px 0;
-  position: relative;
+}
+
+.breeds .breeds-header .breeds-header__list select:hover {
+  border: #FBE0DC solid 2px;
+}
+
+.breeds .breeds-header .breeds-header__list select:focus {
+  outline: solid;
+  outline-color: #FBE0DC;
+}
+
+.breeds .breeds-header .breeds-header__limits {
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.breeds .breeds-header .breeds-header__limits select {
+  -webkit-appearance: none;
+  color: #8C8C8C;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: #F8F8F7;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 150ms ease;
+  width: 101px;
+  height: 40px;
+}
+
+.breeds .breeds-header .breeds-header__limits select:hover {
+  border: #FBE0DC solid 2px;
+}
+
+.breeds .breeds-header .breeds-header__limits select:focus {
+  outline: solid;
+  outline-color: #FBE0DC;
+}
+
+.breeds-header__alphabet-up {
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background: url(/images/alfabet-up.svg) no-repeat center #F8F8F7;
   cursor: pointer;
 }
 
-.search-bar__btn:hover {
-  background-color: #4d4d4d;
+.breeds-header__alphabet-up:hover, .breeds-header__alphabet-up:focus {
+  border: 2px solid #FBE0DC;
+  background: url(/images/alfabet-up-red.svg) no-repeat center #F8F8F7;
 }
 
-.search-bar__btn::after {
-  display: block;
-  content: '';
-  width: 7px;
-  height: 7px;
-  background: transparent;
-  border: 2px solid;
-  border-color: white white transparent transparent;
-  transform: rotate(45deg);
+.breeds-header__alphabet-down {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background: url(/images/alfabet-down.svg) no-repeat center #F8F8F7;
+  cursor: pointer;
 }
 
-.info {
-  width: calc(100% - 3rem);
-  background-color: white;
-  padding: 2rem;
-  border-radius: 15px;
+.breeds-header__alphabet-down:hover, .breeds-header__alphabet-down:focus {
+  border: 2px solid #FBE0DC;
+  background: url(/images/alfabet-down-red.svg) no-repeat center #F8F8F7;
+}
+
+.galery {
+  width: 680px;
+  border-radius: 20px;
+  height: calc(100vh - 9em);
+  background-color: yellow;
+  overflow-y: scroll;
+}
+
+.galery .galery-header {
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 1.5rem;
-  z-index: 10000;
+  flex-direction: row;
+  align-items: center;
 }
 
-@media (min-width: 1024px) {
-  .info {
-    width: 100%;
-    max-width: 1000px;
-    /* transform: translateY(50%); */
-    margin-top: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+.galery .galery-header .header__btn {
+  margin-left: 10px;
+}
+
+.galery .galery-header .header__btn span.btn-span {
+  background: url(/images/back.svg) no-repeat center;
+  margin-top: 3px;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 52px;
+  width: 40px;
+}
+
+.galery .galery-header .header__btn span.btn-span:hover, .galery .galery-header .header__btn span.btn-span:focus {
+  background: url(/images/back2.svg) no-repeat center;
+}
+
+.galery .galery-header .header__title {
+  margin-left: 10px;
+  width: 146px;
+  height: 40px;
+  background-color: #FF868E;
+  border-radius: 10px;
+}
+
+.galery .galery-header .header__title h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #FFF;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@media (max-height: 593px) {
+  .voting {
+    min-height: 100%;
+    padding-bottom: 30px;
+  }
+  .breeds {
+    min-height: 100%;
+    padding-bottom: 30px;
+  }
+  .galery {
+    min-height: 100%;
+    padding-bottom: 30px;
   }
 }
 
-.info__block {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 25%;
-  padding: 0 1rem 2rem;
+.voting-main__img-box {
+  width: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voting-main__img-box img {
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  height: 360px;
+}
+
+.voting-main__btn-box {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 256px;
+  height: 88px;
+  background-color: #FFF;
+  flex-direction: row;
+  border-radius: 10px;
+  position: relative;
+  top: -40px;
+}
+
+.voting-main__btn-box .voting-main__btn-like {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px 0px 0px 10px;
+  background: url(/images/smile_white.svg) no-repeat center #97EAB9;
+  cursor: pointer;
+}
+
+.voting-main__btn-box .voting-main__btn-favourite {
+  width: 80px;
+  height: 80px;
+  margin-left: 5px;
+  background: url(/images/heart_white.svg) no-repeat center #FF868E;
+  cursor: pointer;
+}
+
+.voting-main__btn-box .voting-main__btn-dislike {
+  width: 80px;
+  height: 80px;
+  margin-left: 5px;
+  border-radius: 0px 10px 10px 0px;
+  background: url(/images/sad_white.svg) no-repeat center #FFD280;
+  cursor: pointer;
+}
+
+.voting-list {
+  height: 90px;
+  overflow-y: scroll;
+  margin-left: 10px;
+}
+
+.voting-list .voting-list__box {
+  background-color: #F8F8F7;
+  width: 640px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.voting-list .voting-list__box .voting-list__box-time {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1D1D1D;
+  width: 61px;
+  height: 30px;
+  background-color: #FFF;
+  text-align: center;
+  padding-top: 5px;
+  border-radius: 10px;
+}
+
+.voting-list .voting-list__box .voting-list__box-text {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #8C8C8C;
+}
+
+.voting-list .voting-list__box .voting-list__box-text .id {
+  font-weight: 500;
+  color: #1D1D1D;
+}
+
+.voting-list .voting-list__box img {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.breeds-galery {
+  column-count: 3;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.breeds-galery div img {
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.photo-hover {
   position: relative;
 }
 
-/* .info__block:not(:last-child) {
-  margin-bottom: 2.5rem;
-} */
-.info__block-subtitle {
-  color: #969696;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.3rem;
-}
-
-.info__block-title {
-  color: #2b2b2b;
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-@media (min-width: 1024px) {
-  .info {
-    flex-direction: row;
-  }
-  .info__block {
-    margin-bottom: 0;
-  }
-  .info__block::after {
-    content: '';
-    width: 1px;
-    height: 90%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgba(150, 150, 150, 0.3);
-  }
-  .info__block:last-child::after {
-    display: none;
-  }
-  .info__block-title {
-    font-size: 2.4rem;
-  }
-}
-
-.notify-box {
-  background: #e2e2e2;
-  border: 2px solid navy;
-  padding: 1rem 2rem;
+.photo-hover h2 {
+  visibility: hidden;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background-color: #FFF;
+  border-radius: 10px;
+  height: 34px;
+  text-align: center;
   font-size: 16px;
-  position: fixed;
-  top: 10px;
-  right: 0;
-  transform: translateX(100%);
+  font-weight: 400;
+  color: #FF868E;
+  padding-top: 7px;
+  cursor: pointer;
 }
 
-.show-notify {
-  transform: translateX(0);
+.photo-hover:hover section::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FF868E;
+  opacity: .6;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.photo-hover:hover h2 {
+  visibility: visible;
+}
+
+.breeds-spesific {
+  height: calc(100vh - 9em);
+  background-color: #FFF;
+  border-radius: 20px;
+  overflow-y: scroll;
+}
+
+.breeds-spesific .breeds-spesific__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.breeds-spesific .breeds-spesific__header .header__btn {
+  margin-left: 10px;
+}
+
+.breeds-spesific .breeds-spesific__header .header__btn span.btn-span {
+  background: url(/images/back.svg) no-repeat center;
+  margin-top: 3px;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 52px;
+  width: 40px;
+}
+
+.breeds-spesific .breeds-spesific__header .header__btn span.btn-span:hover, .breeds-spesific .breeds-spesific__header .header__btn span.btn-span:focus {
+  background: url(/images/back2.svg) no-repeat center;
+}
+
+.breeds-spesific .breeds-spesific__header .header__title {
+  margin-left: 10px;
+  width: 146px;
+  height: 40px;
+  background-color: #FF868E;
+  border-radius: 10px;
+}
+
+.breeds-spesific .breeds-spesific__header .header__title h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #FFF;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.breeds-spesific .breeds-spesific__header .specific__id {
+  margin-left: 10px;
+  width: 90px;
+  height: 40px;
+  background-color: #FF868E;
+  border-radius: 10px;
+}
+
+.breeds-spesific .breeds-spesific__header .specific__id h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.breeds-spesific .breeds-spesific__header .specific__title {
+  background-color: #FBE0DC;
+}
+
+.breeds-spesific .breeds-spesific__header .specific__title h2 {
+  color: #FF868E;
+}
+
+.breeds-spesific .breeds-spesific__info {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.breeds-spesific .breeds-spesific__info .breeds-spesific__img-box {
+  width: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breeds-spesific .breeds-spesific__info .breeds-spesific__img-box img {
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  height: 360px;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  height: 204px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  border: #FBE0DC 2px solid;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-title {
+  margin-top: -20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFF;
+  width: 400px;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-title .breed-info__title {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-title .bredd-info__breed-for {
+  font-size: 20px;
+  font-weight: 400;
+  color: #8C8C8C;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-main {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-main .breed-info__description-left {
+  width: 50%;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-main .breed-info__description-left .description-left__temperament {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1D1D1D;
+  margin-bottom: 10px;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-main .breed-info__description-left .description-left__text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #8C8C8C;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-main .breed-info__description-right {
+  width: 50%;
+  padding-left: 20px;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-main .breed-info__description-right .description-right__origin {
+  font-size: 16px;
+  font-weight: 400;
+  color: #8C8C8C;
+  margin-bottom: 10px;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-main .breed-info__description-right .description-right__origin .bold {
+  font-weight: 500;
+  color: #1D1D1D;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-main .breed-info__description-right .description-right__weight {
+  font-size: 16px;
+  font-weight: 400;
+  color: #8C8C8C;
+  margin-bottom: 10px;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-main .breed-info__description-right .description-right__weight .bold {
+  font-weight: 500;
+  color: #1D1D1D;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-main .breed-info__description-right .description-right__life-span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #8C8C8C;
+}
+
+.breeds-spesific .breeds-spesific__info .breed-info__description .breed-info__description-main .breed-info__description-right .description-right__life-span .bold {
+  font-weight: 500;
+  color: #1D1D1D;
 }
 
 @media only screen and (min-width: 768px) {
   body {
     overflow-x: hidden;
+  }
+}
+
+@media only screen and (min-width: 992px) and (min-width: 992px) {
+  .right-place__img {
+    width: 500px;
   }
 }
 
