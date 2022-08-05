@@ -93,27 +93,16 @@ function setInfo(data){
 
     feelslikeInfo.innerText = data.current.feelslike_c + '\u00B0' ;
 }
-
-
-// const link = $('<link>', {
-//     href: '.dist/css/day.css',
-//     rel: "stylesheet"
-//  });
-//  link.appendTo('head')
-//  $('.theme-box').on('click', '.theme-box__btn', function(){
-//     const $this = $(this)
-//     const file = '.dist/css/' + $this.data('file') + ".css";
-//     link.attr('href', file)
-//     $this.prop('disabled', true)
-//     .siblings('button').prop('disabled', false)
-// })
-
+document.addEventListener('DOMContentLoaded', () => {
+  getData('Ukraine').then(setInfo)
+});
 
 function clearThemes() {
   $("html").attr("class", "");
 }
 
 $(function() {
+
   $(".theme-box__btn-day").click(function() {
     clearThemes();
     $("html").addClass("day");

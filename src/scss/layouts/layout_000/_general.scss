@@ -46,7 +46,6 @@ html.night .title {
   font-weight: 600;
   position: relative;
   outline: none;
-  border-radius: 50px;
   display: flex;
   font-size: 16px;
   justify-content: center;
@@ -58,30 +57,16 @@ html.night .title {
 }
 .theme-box__btn-day{
   background-color: white;
+  border-radius: 50px 0 0 50px;
   color:#141414;
 }
 .theme-box__btn-night{
   background-color: #141414;
+  border-radius: 0 50px 50px 0;
   color:white;
 }
 
-
-
-@media (min-width: 1024px) {
-  .finder {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 1.5rem;
-  }
-  .theme-box{
-    align-self: flex-start;    
-  }
-}
-
-
-
 .title {
-  /* color: white; */
   margin-bottom: 1.5rem;
   font-weight: 500;
   font-size: 3rem;
@@ -142,18 +127,7 @@ html.night .title {
   left: 1.5rem;
   z-index: 10000;
 }
-@media (min-width: 1024px) {
-  .info {
-    width: 100%;
-    max-width: 1000px;
-    /* transform: translateY(50%); */
-    margin-top: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-    
-    position: relative;
-  }
-}
+
 
 .info__block {
   flex-grow: 1;
@@ -162,9 +136,6 @@ html.night .title {
   padding: 0 1rem 2rem;
   position: relative;
 }
-/* .info__block:not(:last-child) {
-  margin-bottom: 2.5rem;
-} */
 
 .info__block-subtitle {
   color: hsl(0, 0%, 59%);
@@ -180,29 +151,6 @@ html.night .title {
   font-size: 2rem;
 }
 
-@media (min-width: 1024px) {
-  .info {
-    flex-direction: row;
-  }
-  .info__block {
-    margin-bottom: 0;
-  }
-  .info__block::after {
-    content: '';
-    width: 1px;
-    height: 90%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: hsla(0, 0%, 59%, 0.3);
-  }
-  .info__block:last-child::after {
-    display: none;
-  }
-  .info__block-title {
-    font-size: 2.4rem;
-  }
-}
 
 .notify-box {
   background: #e2e2e2;

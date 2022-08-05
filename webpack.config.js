@@ -19,7 +19,7 @@ const templatesFiles =
   files.filter((el) => /\.html$/.test(el) && el !== "index.html") || [];
 
 module.exports = (env, argv) => {
-  const isProduction = argv.mode === "production";
+  const isProduction = argv.mode === "development";
   const plugins = [
     new MiniCssExtractPlugin({ filename: "./dist/css/style.css" }),
     new WebpackConcatPlugin({
